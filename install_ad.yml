@@ -1,0 +1,10 @@
+---
+# @author: Johan Barón
+# @email: johan.baron@entelgy.com
+# Playbook to create the AD on the Windows server
+
+
+- name: Install the necessary service
+  hosts: windows
+  roles:
+    - role: win_ad_install

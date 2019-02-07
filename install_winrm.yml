@@ -1,0 +1,31 @@
+---
+# @author: Johan Barón
+# @email: johan.baron@entelgy.com
+# Playbooks to ping windows hosts
+
+
+- name: Install dependencies
+  hosts: localhost
+  become: yes
+
+  vars:
+    packages: [python-devel krb5-devel krb5-libs krb5-workstation python-pip gcc python2-winrm.noarch]
+
+  tasks:
+    - name: install local dependencies
+      yum:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ packages }} "
+
+- name: PLAY Wingping
+  hosts: windows
+
+#  roles:
+#    - role: 
+#      become: yes
+  
+  tasks:
+    - name: to ping
+      win_ping:
+

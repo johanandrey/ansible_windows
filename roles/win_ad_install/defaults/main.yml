@@ -1,0 +1,5 @@
+---
+# defaults file for win_ad_install
+
+ad_domain_name: ad1.example.com
+ad_safe_mode_password: J$jjl1006 
