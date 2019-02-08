@@ -5,6 +5,7 @@
 
 - name: PLAY Wingping
   hosts: windows
+  gather_facts: false
 
   tasks:
   - name: to ping
