@@ -1,0 +1,12 @@
+---
+# @author: Johan Barón
+# @email: johan.baron@entelgy.com
+# Playbooks to ping windows hosts
+
+- name: PLAY Wingping
+  hosts: windows
+
+  tasks:
+  - name: to ping
+    win_ping:
+

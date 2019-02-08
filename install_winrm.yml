@@ -5,7 +5,7 @@
 
 
 - name: Install dependencies
-  hosts: localhost
+  hosts: tower
   become: yes
 
   tasks:
@@ -22,14 +22,14 @@
         - gcc
         - python2-winrm.noarch
 
-- name: PLAY Wingping
-  hosts: windows
+          #- name: PLAY Wingping
+          #  hosts: windows
 
 #  roles:
 #    - role: 
 #      become: yes
   
-  tasks:
-    - name: to ping
-      win_ping:
+          #  tasks:
+          #    - name: to ping
+          #      win_ping:
 
